@@ -1,10 +1,7 @@
 # Creating an animal classifier( 'horse','camel','zebra','elephant') form custom dataset by scraping images from google.
 
-
-## Steps for creating a deep learning dataset from google images 
-
 Inspired by Adrian Rosebrock, fast.ai course lesson 2
-
+## Steps for creating a deep learning dataset from google images 
 STEPS:
 1. For every class label, google search the images. Scroll down until you have enough images for that class.
 
@@ -17,5 +14,4 @@ STEPS:
     urls=Array.from(document.querySelectorAll('.rg_i')).map(el=> el.hasAttribute('data-src')?el.getAttribute('data-src'):el.getAttribute('data-iurl')); window.open('data:text/csv;charset=utf-8,' + escape(urls.join('\n')));  
 
 3. Repeat these steps for all the classes you want in the dataset
-
 
